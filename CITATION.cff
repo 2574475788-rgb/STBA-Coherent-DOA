@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or numerical data, please cite this software record and the associated article."
+
+title: "STBA-Coherent-DOA: MATLAB code and numerical data for coherent-source DOA estimation"
+
+type: software
+
+authors:
+  - family-names: "Huang"
+    given-names: "JianWei"
+
+version: 1.0.0
+
+license: MIT
+
+repository-code: "https://github.com/2574475788-rgb/STBA-Coherent-DOA"
+
+keywords:
+  - direction-of-arrival estimation
+  - coherent sources
+  - sparse arrays
+  - nested arrays
+  - ST-BA
+  - MATLAB
