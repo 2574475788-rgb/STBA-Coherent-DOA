@@ -1,0 +1,92 @@
+# ML_CFR public package — file guide
+
+本文件解释 GitHub/Zenodo 精简版中每个保留文件的用途。
+
+- `.gitignore` — 避免 MATLAB 临时文件、本地图片和 checkpoint 被误提交到 Git。
+- `assert_project_dependencies.m` — 检查关键函数是否存在并防止 MATLAB path 被旧工程同名函数污染。
+- `CLEANUP_NOTES_ZH.md` — 解释哪些开发历史和绘图代码被移除以及原因。
+- `DATA_FILES_ZH.md` — 逐项解释保留的 MAT/CSV 数值数据。
+- `experiments/formal/ula_transfer_snapshot.m` — FORMAL reduced ULA-transfer snapshot comparison ST-BA vs CML vs FBSS-MUSIC
+- `experiments/formal/ula_transfer_snr.m` — FORMAL reduced ULA-transfer SNR comparison ST-BA vs CML vs FBSS-MUSIC
+- `experiments/formal/unequal_amplitude_formal.m` — Formal ST-BA operating-boundary sweep versus coherent-source amplitude ratio.
+- `experiments/qualification/ula_transfer_sanity.m` — Reduced ULA geometry-transfer sanity: ST-BA / CML / FBSS-MUSIC. Qualification only. PASS is finite-output validity, not performance ranking.
+- `experiments/qualification/unequal_amplitude_sanity.m` — Unequal-amplitude ST-BA qualification. No performance-ranking gate.
+- `experiments/reproduction/ba_profile_score.m` — BA_PROFILE_SCORE Profiled residual-evidence score for a candidate B. The SAME working model used by BA-FGLS is used here:
+- `experiments/reproduction/crossfit_adaptive_ba_fgls.m` — CROSSFIT_ADAPTIVE_BA_FGLS Two-way cross-fitted pilot selector. Why:
+- `experiments/reproduction/generate_trial_ar1.m` — GENERATE_TRIAL_AR1 Fully coherent sources with a stochastic narrowband Gauss-Markov (AR(1)) complex envelope.
+- `experiments/reproduction/run_v1g_stability_selector_test.m` — Version 1G: split-half pilot-stability selector V1F result:
+- `experiments/reproduction/run_v3c_robustness_formal.m` — V3C FORMAL MODEL-MISMATCH ROBUSTNESS PRE-REGISTERED before seeing formal results.
+- `experiments/submission_final/analyze_submission_final_paired_ci.m` — ANALYZE_SUBMISSION_FINAL_PAIRED_CI Post-process the already completed submission-final Monte Carlo.
+- `experiments/submission_final/export_submission_baseline_qualification.m` — EXPORT_SUBMISSION_BASELINE_QUALIFICATION Create an auditable supplementary table for external baseline qualification.
+- `experiments/submission_final/run_submission_final_paired.m` — RUN_SUBMISSION_FINAL_PAIRED Final fresh same-X evidence generation. Usage:
+- `experiments/submission_final/submission_final_eval_threeway.m` — SUBMISSION_FINAL_EVAL_THREEWAY Same-X evaluation of the three qualified/retained paper comparators:
+- `experiments/submission_final/submission_final_summarize.m` — SUBMISSION_FINAL_SUMMARIZE Aggregate per-condition metrics. doaMse/maxErr/failed: Ntrial x Ncondition x Nmethod.
+- `experiments/submission_final/verify_submission_final_patch.m` — VERIFY_SUBMISSION_FINAL_PATCH Preflight for the final fresh paired Monte-Carlo evidence generation.
+- `README_ZH.md` — 公开 GitHub/Zenodo 包总说明与运行入口。
+- `results/candidate/unequal_amplitude_formal_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/candidate/v8f_ula_reduced_snr_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/candidate/v8g_ula_reduced_snapshot_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/frozen/v1g_stability_selector_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/frozen/v3c_robustness_formal_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/qualification/unequal_amplitude_sanity_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/qualification/v8e_ula_reduced_sanity_results.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/external_baseline_qualification.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/external_baseline_qualification_README.txt` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/FigS2_mc_stability_bootstrap.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_keypoint.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_keypoint_MC_convergence.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_keypoint_summary.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_paired_STBA_vs_CML_CI.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_postprocess.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_runtime.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_runtime.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_separation.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_separation_summary.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_snapshot.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_snapshot_summary.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_snr.mat` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `results/submission_final/submission_final_snr_summary.csv` — 论文数值结果或资格记录；具体内容见 `DATA_FILES_ZH.md`。
+- `run_clean_pipeline.m` — 公开包统一入口：依赖检查、统计后处理或最终 paired Monte Carlo。
+- `setup_project.m` — 将本公开包的源码和实验目录加入 MATLAB path。
+- `src/baselines/fbss_music_ula_estimate.m` — FBSS_MUSIC_ULA_ESTIMATE Forward/backward spatial-smoothing MUSIC baseline. The source paper describes FBSS but does not state a numerical subarray
+- `src/cml/cml_equalamp_k2_continuous_polish.m` — CML_EQUALAMP_K2_CONTINUOUS_POLISH Continuous local polish of frozen grid/fine CML. This wrapper does NOT replace cml_equalamp_k2_estimate. It first calls the
+- `src/cml/cml_equalamp_k2_estimate.m` — CML_EQUALAMP_K2_ESTIMATE Source-faithful equal-amplitude K=2 CML baseline. Implements the concentrated deterministic maximum-likelihood benchmark
+- `src/common/angle_error_k.m` — ANGLE_ERROR_K Ordered 1-D DOA matching error for equal-cardinality sets. In one-dimensional angle space with squared-error loss, sorting both sets
+- `src/common/assert_ula_candidate_integrity.m` — ASSERT_ULA_CANDIDATE_INTEGRITY Verify reduced ULA candidate result set.
+- `src/common/config_v0.m` — CONFIG_V0 Fixed configuration for the first ML-CFR validation version. No toolboxes are required beyond base MATLAB.
+- `src/common/lagged_covariances.m` — LAGGED_COVARIANCES Sample nonzero-lag cross-correlation matrices. R_tau = 1/(N-tau) * X(:,tau+1:N) * X(:,1:N-tau)^H
+- `src/common/nmse_B.m` — NMSE_B Normalized Frobenius error for trace-normalized spatial factors.
+- `src/common/paired_bootstrap_ci.m` — PAIRED_BOOTSTRAP_CI Percentile bootstrap CI for a paired mean difference.
+- `src/common/project_rank1_psd.m` — PROJECT_RANK1_PSD Recover a Hermitian PSD rank-one spatial factor. Steps:
+- `src/common/steering_matrix.m` — STEERING_MATRIX Sparse-array steering matrix. Convention used everywhere in this package:
+- `src/crb/coherent_equalamp_constrained_crb_k2.m` — COHERENT_EQUALAMP_CONSTRAINED_CRB_K2 Exact-model conditional deterministic CRB for the project's K=2 model.
+- `src/generators/generate_trial_ar1_k.m` — GENERATE_TRIAL_AR1_K K-source fully coherent AR(1)-envelope generator. Generalizes generate_trial_ar1.m from K=2 to arbitrary cfg.K.
+- `src/generators/generate_trial_ar1_k_weighted.m` — GENERATE_TRIAL_AR1_K_WEIGHTED Fully coherent AR(1) generator with fixed magnitudes. Model:
+- `src/generators/generate_trial_mismatch_k.m` — GENERATE_TRIAL_MISMATCH_K Frozen-algorithm robustness generator. Fully coherent model:
+- `src/generators/robustness_scenarios.m` — ROBUSTNESS_SCENARIOS Pre-registered V3 model-mismatch scenarios. All scenarios use the same K=2 geometry distribution, beta phases,
+- `src/stba/backend/coarse_k_beam_candidates.m` — COARSE_K_BEAM_CANDIDATES Deterministic K-source coarse initialization. The full K-dimensional grid grows combinatorially. Instead of a single
+- `src/stba/backend/estimate_doa_from_B_varpro_k.m` — ESTIMATE_DOA_FROM_B_VARPRO_K General K-source continuous decoder. 1) Extract principal coherent spatial vector b from rank-one PSD B.
+- `src/stba/backend/extract_b_from_B.m` — EXTRACT_B_FROM_B Principal spatial vector from a rank-one PSD matrix. Global complex phase is not identifiable and is immaterial because the
+- `src/stba/backend/varpro_objective_k.m` — VARPRO_OBJECTIVE_K K-source separable nonlinear least-squares objective. From the recovered coherent spatial factor:
+- `src/stba/frontends/ba_fgls_with_pilot.m` — BA_FGLS_WITH_PILOT Bias-annihilated augmented-lag FGLS using a supplied pilot. This is a diagnostic helper for Version 1D.
+- `src/stba/frontends/build_frozen_method_bank.m` — BUILD_FROZEN_METHOD_BANK Frozen internal method bank for paper-scale tests. IMPORTANT:
+- `src/stba/frontends/estimate_frontends.m` — ESTIMATE_FRONTENDS Run all Version-0 common-factor front ends on SAME data.
+- `src/stba/frontends/estimate_stba_k2_runtime.m` — ESTIMATE_STBA_K2_RUNTIME Minimal frozen ST-BA end-to-end K=2 estimator. This wrapper is ONLY for fair runtime measurement.
+- `src/stba/frontends/evaluate_method_bank_k.m` — EVALUATE_METHOD_BANK_K Evaluate all frozen B estimates with the SAME VP backend.
+- `src/stba/frontends/fgls_cfr.m` — FGLS_CFR One-step feasible-GLS common-factor recovery. Lag-domain rank-one regression:
+- `src/stba/frontends/ml_cfr.m` — ML_CFR Multi-Lag Common-Factor Recovery. Stack vec(R_tau) as columns:
+- `src/stba/frontends/phase_aligned_mla.m` — PHASE_ALIGNED_MLA Strong multi-lag averaging baseline. Different lags have different complex correlation phases. A direct
+- `src/stba/frontends/single_lag_cfr.m` — SINGLE_LAG_CFR Single-lag structural control. Uses exactly the same rank-one PSD projection as ML-CFR.
+- `src/stba/frontends/stability_adaptive_ba_fgls.m` — STABILITY_ADAPTIVE_BA_FGLS Split-half pilot-stability selector. V1D showed that the main bottleneck is PILOT quality:
+- `src/stba/frontends/zero_lag_pca.m` — ZERO_LAG_PCA Rank-one signal-factor estimate from zero-lag covariance. This is a diagnostic control. For the ideal fully coherent model,
+- `src/tmr/tmr_coarray_observation.m` — TMR_COARRAY_OBSERVATION Build Eqs. (20)-(23) inputs. Difference convention:
+- `src/tmr/tmr_coarray_ss_covariance.m` — TMR_COARRAY_SS_COVARIANCE Spatially-smoothed coarray covariance. Input co.lagVals must correspond to contiguous lags -P:P.
+- `src/tmr/tmr_music_from_cov.m` — TMR_MUSIC_FROM_COV Known-K MUSIC on reconstructed ULA covariance.
+- `src/tmr/tmr_remove_source_cross_terms.m` — TMR_REMOVE_SOURCE_CROSS_TERMS Operational form of Eqs. (18)-(19). The paper states that the off-diagonal source-covariance contribution
+- `src/tmr/tmr_source_cov_initial.m` — TMR_SOURCE_COV_INITIAL Eq. (17) of Zhang et al. A_dag(Theta) = A^H (A A^H)^(-1), since A is wide.
+- `src/tmr/tmr_steering.m` — TMR_STEERING Steering convention used in the TVT paper: a(theta) = exp(-j*pi*p*sin(theta)) for d=lambda/2.
+- `src/tmr/tmr_vai_fully_augmented_estimate.m` — TMR_VAI_FULLY_AUGMENTED_ESTIMATE Corrected fully-augmented specialization of Zhang et al. TMR-VAI.
+- `STATIC_AUDIT_ZH.md` — 仓库说明文档。
+
+- `MANIFEST.csv` — 文件路径、类型、字节数与 SHA-256 的机器可读清单。
+- `SHA256_MANIFEST.txt` — 用于归档完整性校验的 SHA-256 清单。

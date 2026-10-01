@@ -1,0 +1,4 @@
+name,status,authorCode,mainCurve,evidence,notes
+Peng PCA-VP independent,NOT QUALIFIED,0,0,"Phase-2W frozen 23/24 numerical closure; not published-Peng baseline",May be discussed only as independent PCA-VP specialization
+Peng MANM independent development,NOT QUALIFIED,0,0,"Phase-3D/3E development failed with catastrophic cases",Post-hoc dual-polynomial audit did not create qualification
+MESA independent,NOT QUALIFIED,0,0,"Phase-M2: 12/12 numerical protocol, 4/4 paper-like <=2deg, project 6/8 <=2deg, one >5deg",Do not retune mu from Phase-M2 outcomes
